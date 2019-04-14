@@ -1,11 +1,10 @@
-import os
 from tkinter import *
-from mutagen.mp3 import MP3
 from pygame import mixer
 from tkinter import filedialog
 import tkinter.messagebox
 
 root = Tk()
+
 
 
 statusbar = Label(root, text= 'Hey there', relief= SUNKEN, anchor=W)
@@ -31,7 +30,6 @@ def browse_file():
     add_to_playlist(filename_path)
 
 def add_to_playlist(filename):
-    # filename= os.path.basename(filename)
     index= 0
     playlistbox.insert(index, filename)
     playlist.insert(index, filename_path)
@@ -83,25 +81,11 @@ root.iconbitmap(r'images/sampy.ico')
 filelabel = Label(topframe, text= 'Welcome to sampy music player')
 filelabel.pack(pady=10)
 
-# lengthlabel = Label(root, text= 'Total Length : --:--')
-# lengthlabel.pack()
 
 
 
 def show_details():
     filelabel['text'] = 'Playing'
-    # file_data = os.path.splitext(filename)
-    # if file_data[1] == '.mp3':
-    #     audio = MP3(filename)
-    #     total_length = audio.info.length
-    # else:
-    #     a = mixer.Sound(filename)
-    #     total_length = a.get_length()
-    #     min, sec = divmod(total_length, 60)
-    #     min = round(min)
-    #     sec = round(sec)
-    #     timeformat = '(:02d):(:02d)'.format(min, sec)
-    #     lengthlabel['text'] = "Total Length" + '-' + timeformat
 
 
 

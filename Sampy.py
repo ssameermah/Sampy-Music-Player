@@ -14,7 +14,7 @@ statusbar.pack(side = BOTTOM, fill = X)
 # leftframe= playlist
 # rightframe= topframe, middleframe, bottomframe
 
-#creating a menubar
+
 
 menubar = Menu(root)
 root.config(menu = menubar)
